@@ -16,6 +16,7 @@ namespace vnotex
     struct FileOpenParameters;
     class Event;
     class Notebook;
+    struct Location;
 
     class VNoteX : public QObject
     {
@@ -105,6 +106,12 @@ namespace vnotex
         void locateNodeRequested(Node *p_node);
 
         void exportRequested();
+
+        // Requested to clear location list.
+        void clearLocationListRequested();
+
+        // Add one location to location list.
+        void addToLocationListRequested(const Location &p_location, const QString &p_text, const QString &p_note);
 
     private:
         explicit VNoteX(QObject *p_parent = nullptr);

@@ -19,6 +19,8 @@ namespace vnotex
     class ViewArea;
     class Event;
     class OutlineViewer;
+    class LocationList;
+    class SearchPanel;
 
     enum { RESTART_EXIT_CODE = 1000 };
 
@@ -85,7 +87,9 @@ namespace vnotex
         enum DockIndex
         {
             NavigationDock = 0,
-            OutlineDock
+            OutlineDock,
+            SearchDock,
+            LocationListDock
         };
 
         void setupUI();
@@ -99,6 +103,14 @@ namespace vnotex
         void setupNavigationDock();
 
         void setupOutlineDock();
+
+        void setupSearchDock();
+
+        void setupSearchPanel();
+
+        void setupLocationListDock();
+
+        void setupLocationList();
 
         void setupNotebookExplorer(QWidget *p_parent = nullptr);
 
@@ -129,6 +141,8 @@ namespace vnotex
 
         void setTipsAreaVisible(bool p_visible);
 
+        void setupDockActivateShortcut(QDockWidget *p_dock, const QString &p_keys);
+
         ToolBarHelper m_toolBarHelper;
 
         StatusBarHelper m_statusBarHelper;
@@ -142,6 +156,10 @@ namespace vnotex
         QWidget *m_viewAreaStatusWidget = nullptr;
 
         OutlineViewer *m_outlineViewer = nullptr;
+
+        LocationList *m_locationList = nullptr;
+
+        SearchPanel *m_searchPanel = nullptr;
 
         QVector<QDockWidget *> m_docks;
 

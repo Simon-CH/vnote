@@ -74,6 +74,8 @@
         <file>icons/stay_on_top.svg</file>
         <file>icons/outline_editor.svg</file>
         <file>icons/find_replace_editor.svg</file>
+        <file>icons/search.svg</file>
+        <file>icons/cancel.svg</file>
         <file>icons/section_number_editor.svg</file>
         <file>icons/sort.svg</file>
         <file>logo/vnote.svg</file>
